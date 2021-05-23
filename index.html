@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gaming Website Page - Utkarsh Kore</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="navbar">
-            <img src="images/logo.png" alt="logo">
-            <nav></nav>
-            <img src="images/menu.png" alt="menu-icon">
+      <div class="navbar">
+        <img src="images/logo.png" alt="logo" class="logo" />
+        <nav>
+          <ul id="menu-list">
+            <li><a href="">Game Controllers</a></li>
+            <li><a href="">VR Accessories</a></li>
+            <li><a href="">Media Remotes</a></li>
+            <li><a href="">Others</a></li>
+          </ul>
+        </nav>
+        <img
+          src="images/menu.png"
+          alt="menu-icon"
+          class="menu-icon"
+          onclick="toggleMenu()"
+        />
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <h2>PS4 V2 <br />Dualshock</h2>
+          <h3>Wireless controller for Playstation 4</h3>
+          <p>(Compatible/Generic)</p>
+          <h4>$32.50</h4>
+          <button type="button">
+            Buy Now <img src="images/arrow.png" alt="icon" />
+          </button>
         </div>
+        <div class="col-2">
+          <img
+            src="images/controller.png"
+            alt="controller"
+            class="controller"
+          />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <img src="images/add.png" alt="" />
+            <p><small>Add to Cart</small></p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+
+    <div class="social-links">
+      <img src="images/fb.png" alt="" />
+      <img src="images/tw.png" alt="" />
+      <img src="images/ig.png" alt="" />
+    </div>
+
+    <script>
+      const menuList = document.getElementById("menu-list");
+      menuList.style.maxHeight = "0px";
+
+      const toggleMenu = () => {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "130px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      };
+    </script>
+  </body>
 </html>
